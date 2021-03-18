@@ -6,7 +6,7 @@ param(
 	[string[]]$ComputerNames,
 
 	[parameter(Mandatory, HelpMessage= "Provide 'add' or 'remove' for -ActionType")]
-	[ValidateSet(“add”,”remove”)]
+	[ValidateSet("add","remove")]
 	[string]$ActionType,
 
 	[parameter(Mandatory, HelpMessage= "Azure Log Analytics Workspace ID")]
