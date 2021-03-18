@@ -20,7 +20,7 @@ This script has the following optional parameters:
 * -WorkspaceKey - Only required if adding a workspace
 
 
-.\updateDeviceMMAConfig.ps1 -ActionType [add | remove] [-WorkspaceId \<WORKSPACE-ID\>] -WorkspaceKey \<WORKSPACE-KEY\> [-InputCsvPath \<PATH-TO-CSV\> | -ComputerNames \<COMMA-SEPARATED-NAMES\>]
+.\updateDeviceMMAConfig.ps1 -ActionType [add | remove] -WorkspaceId \<WORKSPACE-ID\> [-WorkspaceKey \<WORKSPACE-KEY\>] [-InputCsvPath \<PATH-TO-CSV\> | -ComputerNames \<COMMA-SEPARATED-NAMES\>]
 
 ## Examples
 
