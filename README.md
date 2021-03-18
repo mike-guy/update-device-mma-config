@@ -13,33 +13,32 @@ The script assumes that WinRM is enabled in the environment and that remote powe
 ## Usage
 This script has the following mandatory parameters:
 * -ActionType - Must be set to "add" or "remove" depending what you are trying to do
-* -InputCsvPath OR -ComputerNames - Either provide a CSV file with computer names or add interactively in the terminal
+* -InputCsvPath OR -ComputerNames - Either provide a CSV file with computer names or add interactively in the terminal. The CSV file (if used) should only contain a single column with "ComputerName" as the heading.
 * -WorkspaceId - Workspace ID is always required, regardless if you are adding or removing the workspace
 
 This script has the following optional parameters:
 * -WorkspaceKey - Only required if adding a workspace
 
-The CSV file (if used) should only contain a single column with "ComputerName" as the heading.
 
-.\updateDeviceMMAConfig.ps1 -ActionType [add | remove] [-WorkspaceId <WORKSPACE-ID>] -WorkspaceKey <WORKSPACE-KEY> [-InputCsvPath <PATH-TO-CSV> | -ComputerNames <COMMA-SEPARATED-NAMES]
+.\updateDeviceMMAConfig.ps1 -ActionType [add | remove] [-WorkspaceId \<WORKSPACE-ID\>] -WorkspaceKey \<WORKSPACE-KEY\> [-InputCsvPath \<PATH-TO-CSV\> | -ComputerNames \<COMMA-SEPARATED-NAMES\>]
 
 ## Examples
 
 ### Add a new workspace to servers without a CSV file
 
-.\updateDeviceMMAConfig.ps1 -ActionType add -WorkspaceId <WORKSPACE-ID> -WorkspaceKey <WORKSPACE-KEY> -ComputerNames someserver, anotherserver, yetanotherserver
+.\updateDeviceMMAConfig.ps1 -ActionType add -WorkspaceId \<WORKSPACE-ID\> -WorkspaceKey \<WORKSPACE-KEY\> -ComputerNames someserver, anotherserver, yetanotherserver
   
 ### Remove a workspace from servers without a CSV file
 
-.\updateDeviceMMAConfig.ps1 -ActionType remove -WorkspaceId <WORKSPACE-ID> -ComputerNames someserver, anotherserver, yetanotherserver
+.\updateDeviceMMAConfig.ps1 -ActionType remove -WorkspaceId \<WORKSPACE-ID\> -ComputerNames someserver, anotherserver, yetanotherserver
   
   
 ### Add a new workspace to servers with a CSV file
 
-.\updateDeviceMMAConfig.ps1 -ActionType add -WorkspaceId <WORKSPACE-ID> -WorkspaceKey <WORKSPACE-KEY> -InputCsvPath myserverlist.csv
+.\updateDeviceMMAConfig.ps1 -ActionType add -WorkspaceId \<WORKSPACE-ID\> -WorkspaceKey \<WORKSPACE-KEY\> -InputCsvPath myserverlist.csv
   
 ### Remove a workspace from servers with a CSV file
 
-.\updateDeviceMMAConfig.ps1 -ActionType remove -WorkspaceId <WORKSPACE-ID> -InputCsvPath myserverlist.csv
+.\updateDeviceMMAConfig.ps1 -ActionType remove -WorkspaceId \<WORKSPACE-ID\> -InputCsvPath myserverlist.csv
   
   
